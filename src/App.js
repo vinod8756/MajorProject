@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes, Navigate } from "react-router-dom";
+import "./App.css";
+import Homepage from "./Components/Home/Home";
+import Login from "./Components/Login/Login";
+import Signup from "./Components/Login/SignUp";
+import ProtectedRoute from "./protectedRoute";
+import { Box } from "@mui/material";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Box
+              sx={{
+                minHeight: "100vh",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Login />
+            </Box>
+          }
+        />
+        <Route path="/signup" element={<Signup />} />
+        <Route
+          path="/home/*"
+          element={
+            <ProtectedRoute>
+              <Homepage />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/home" element={<Navigate to="/home/dashboard" />} />
+      </Routes>
     </div>
   );
 }

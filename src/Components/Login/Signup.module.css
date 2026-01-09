@@ -1,0 +1,122 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 360px;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.text img {
+  height: 50px;
+  width: 50px;
+}
+
+.text h1 {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  font-size: 2.8rem;
+  margin: 0;
+  line-height: 1;
+}
+
+.subtitle {
+  text-align: center;
+  max-width: 400px;
+  margin: 0;
+  opacity: 0.4;
+}
+
+.formCard {
+  margin-top: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  padding: 2rem;
+  width: 100%;
+  background-color: #fff;
+}
+
+.inputLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.primaryButton {
+  margin-top: 1rem;
+  background-color: #ff7043 !important;
+  color: #fff !important;
+  font-weight: bold !important;
+  text-transform: none !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 10px rgba(255, 112, 67, 0.3) !important;
+}
+
+.primaryButton:hover {
+  background-color: #e64a19 !important;
+  box-shadow: 0 6px 14px rgba(230, 74, 25, 0.4) !important;
+}
+
+.switchAuth {
+  text-align: center;
+  margin: 1rem 0;
+  color: #666;
+}
+
+.switchAuth span {
+  font-weight: bolder;
+  font-size: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #1976d2;
+}
+
+.orContinue {
+  text-align: center;
+  margin: 1rem 0;
+  color: #666;
+}
+
+.socialButtons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.googleButton {
+  text-transform: none !important;
+  border-color: #4285F4 !important;
+  color: #4285F4 !important;
+}
+
+.googleButton:hover {
+  background-color: rgba(66, 133, 244, 0.1) !important;
+  border-color: #4285F4 !important;
+}
+
+.appleButton {
+  text-transform: none !important;
+  border-color: #000 !important;
+  color: #000 !important;
+}
+
+.appleButton:hover {
+  background-color: rgba(0,0,0,0.1) !important;
+  border-color: #000 !important;
+}
